@@ -1,12 +1,193 @@
 .App {
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
-
+ .chart{
+  width:50%;
+  margin: auto;
+  /* background-color: rgb(6, 52, 255); */
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+.small-box{
+  border: 1px solid rgb(95, 95, 95);
+  /* background-color: hotpink; */
+}
+.small-box:hover{
+  background-color:rgb(19, 149, 255);
+  transform: translateY(15px);
+  transition: 0.5s;
+  color: white !important;
+}
+.progress1 {
+  position: relative;
+  width: 80px;
+  height: 80px !important;
+  float: right;
+  line-height: 0px;
+  background: none;
+  margin-left: 0px;
+  box-shadow: none;
+  position: relative;
+bottom:70px;
+}
 
+.progress1:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 8.5px solid rgb(102, 102, 102);
+  position: absolute;
+  top: 0;
+  left: 0
+}
+
+.progress1>span {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 1
+}
+
+.progress1 .progress-left {
+  left: 0
+}
+
+.progress1 .progress-bar {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-width: 8px;
+  border-style: solid;
+  position: absolute;
+  top: 0;
+}
+
+.progress1 .progress-left .progress-bar {
+  left: 100%;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  border-left: 0;
+  -webkit-transform-origin: center left;
+  transform-origin: center left
+}
+
+.progress1 .progress-right {
+  right: 0
+}
+
+.progress1 .progress-right .progress-bar {
+  left: -100%;
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+  border-right: 0;
+  -webkit-transform-origin: center right;
+  transform-origin: center right;
+  animation: loading-1 1.8s linear forwards
+}
+
+.progress1 h5{
+position: absolute;
+margin-top: 25px;
+float: center;
+left: 20%;
+color: #cf37fd;
+}
+.small-box .fa-external-link-alt{
+  color: #cf37fd; 
+}
+.small-box:hover .progress1.purple .progress-bar, .small-box:hover .progress1.blue .progress-bar,
+.small-box:hover .progress1.red .progress-bar{
+  border-color: #ffffff !important;
+  color: white !important;
+}
+.small-box:hover h5, .small-box:hover .fas{
+  color: white !important;
+}
+.progress1.purple .progress-bar {
+  border-color: #cf37fd;
+}
+
+.progress1.purple .progress-left .progress-bar {
+  animation: loading-2 1.5s linear forwards 1.8s
+}
+
+.progress1.blue .progress-bar {
+  border-color:rgb(19, 149, 255);
+}
+.progress1.blue .progress-left .progress-bar {
+  animation: loading-3 1.5s linear forwards 1.8s
+}
+.progress1.red .progress-bar {
+  border-color:rgb(159, 1, 190);
+}
+.progress1.red .progress-left .progress-bar {
+  animation: loading-3 1.5s linear forwards 1.8s
+}
+.campaign_div{
+  border-right: 1px solid grey;
+  padding: 0 10px 0 20px;
+}
+.campaign_div i{
+  padding-top: 20px;
+  /* margin-right: 10px; */
+  color: rgb(255, 29, 29);
+}
+.user_name{
+  font-size: 1.2rem;
+  margin-left: 10px;
+  font-weight: 600;
+position: absolute;
+/* top:1%; */
+}
+.user_name p{
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 0;
+  color: blue;
+}
+
+@keyframes loading-1 {
+  0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg)
+  }
+
+  100% {
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg)
+  }
+}
+
+@keyframes loading-2 {
+  0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg)
+  }
+
+  100% {
+      -webkit-transform: rotate(70deg);
+      transform: rotate(70deg)
+  }
+}
+
+@keyframes loading-3 {
+  0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg)
+  }
+
+  100% {
+      -webkit-transform: rotate(60deg);
+      transform: rotate(60deg)
+  }
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
