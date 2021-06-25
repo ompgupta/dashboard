@@ -81,11 +81,11 @@ const Dashboard = () => {
                 </div>
                 {/* ******* 2nd row******** */}
                 <div className="row">
-                  <div className="col-md-8">
+                  <div className="col-md-8 two_row">
                   <div className="card w-100">
                     
           <div className="card-body bg-dark text-white w-100 pr-5 pb-5" style={{border:'1px solid grey'}}>
-            <p>Application Received<span className="ml-5">This Year</span> 
+            <p>Application Received<span className="ml-5 year">This Year</span> 
             <span className="pl-3">This Week</span><span  className="pl-3"><i class="fas fa-folder"></i></span><span  className="pl-3"><i class="fas fa-ellipsis-v"></i></span></p>
         <Linechart/>
       
@@ -115,7 +115,7 @@ const Dashboard = () => {
                 </div>
                 {/* ******* 3 row******** */}
                 <div className="row">
-                  <div className="col-md-8 mt-3 ">
+                  <div className="col-md-8 mt-3 3rd_row">
                   <div className="card w-100">
                     <div className="card-body bg-dark text-white w-100 pb-4" style={{border:'1px solid grey'}}>
                       <p>Referals and Campaign State <span className=' text-danger ml-4'><i className="far fa-paper-plane"></i>40 Campaign sent in total</span><br /><span className="float-right">Campaign sent in last month</span></p>
@@ -149,67 +149,70 @@ const Dashboard = () => {
                       </div>
                       </div>
                   </div>
-                  <div className="col-md-4 mt-3">
+                  <div className="col-md-4 mt-3 pie_div">
                    <div className="card-body pb-4" style={{border:'1px solid grey'}}>
                      <p>Open Position<i class="fas fa-ellipsis-h pl-5 ml-3"></i></p>
-                   <Piechart/>
+                     <div className="pie_div1">
+                   <Piechart />
+                   </div>
                    </div>
                   </div>
                 </div>
               </div>
               {/* +++++++2nd component********** */}
-              <div className="col-md-4" style={{border:'1px solid grey'}}>
+              <div className="col-md-4 px-2" style={{border:'1px solid grey', overflow:'hidden'}}>
                 <div className="card-body text-center">
                 <h6>Hello John Bayer,</h6>
                 <p>You Have 8 New Applications Today!</p>
                 <img src={chaitbox} alt="" width="300" height='150' />
                 </div>
                 <div className="card-bod mt-3">
-                  <h6>New Applicants<i class="fas fa-chevron-right float-right mr-3"></i></h6>
+                  <h6 className="ml-2">New Applicants<i class="fas fa-chevron-right float-right mr-3"></i></h6>
                   <div className="list_div">
                     <ul className="nav nav-treeview">
-                      <li className="nav-item w-100 mt-4">
-                       <i class="far fa-user-circle fa-2x mt-1"></i>
-                         <span className="user_name">Rosie Metts <br />
-                         <p >examples</p></span>                       
-                       <i class="fas fa-phone-alt fa-1x float-right mt-2"></i>
-                       <i class="fas fa-comment float-right mr-4 mt-2"></i>
-                      </li>
                       <li className="nav-item w-100 mt-4 pt-3">
                        <i class="far fa-user-circle fa-2x mt-1"></i>
                          <span className="user_name">Rosie Metts <br />
                          <p >examples</p></span>                       
-                       <i class="fas fa-phone-alt fa-1x float-right mt-2"></i>
-                       <i class="fas fa-comment float-right mr-4 mt-2"></i>
-                      </li>
-                      <li className="nav-item w-100 mt-4  pt-3">
-                       <i class="far fa-user-circle fa-2x mt-1"></i>
-                         <span className="user_name">Rosie Metts <br />
-                         <p >examples</p></span>                       
-                       <i class="fas fa-phone-alt fa-1x float-right mt-2"></i>
-                       <i class="fas fa-comment float-right mr-4 mt-2"></i>
-                      </li>
-                      <li className="nav-item w-100 mt-4  pt-3">
-                       <i class="far fa-user-circle fa-2x mt-1"></i>
-                         <span className="user_name">Rosie Metts <br />
-                         <p >examples</p></span>                       
-                       <i class="fas fa-phone-alt fa-1x float-right mt-2"></i>
-                       <i class="fas fa-comment float-right mr-4 mt-2"></i>
-                      </li>
-                      <li className="nav-item w-100 mt-4  pt-3">
-                       <i class="far fa-user-circle fa-2x mt-1"></i>
-                         <span className="user_name">Rosie Metts <br />
-                         <p >examples</p></span>                       
-                       <i class="fas fa-phone-alt fa-1x float-right mt-2"></i>
-                       <i class="fas fa-comment float-right mr-4 mt-2"></i>
+                       <i class="fas fa-phone-alt fa-1x float-right mt-2 pr-2"></i>
+                       <i class="fas fa-comment float-right mr-3 mt-2"></i>
                       </li>
                       <li className="nav-item w-100 mt-4 pt-3">
                        <i class="far fa-user-circle fa-2x mt-1"></i>
-                         <span className="user_name">Rosie Metts <br />
+                         <span className="user_name">James Scott <br />
                          <p >examples</p></span>                       
-                       <i class="fas fa-phone-alt fa-1x float-right mt-2"></i>
-                       <i class="fas fa-comment float-right mr-4 mt-2"></i>
-                      </li> 
+                       <i class="fas fa-phone-alt fa-1x float-right mt-2 pr-2"></i>
+                       <i class="fas fa-comment float-right mr-3 mt-2"></i>
+                      </li>
+                      <li className="nav-item w-100 mt-4 pt-3">
+                       <i class="far fa-user-circle fa-2x mt-1"></i>
+                         <span className="user_name">Jamie Lauerson<br />
+                         <p >examples</p></span>                       
+                       <i class="fas fa-phone-alt fa-1x float-right mt-2 pr-2"></i>
+                       <i class="fas fa-comment float-right mr-3 mt-2"></i>
+                      </li>
+                      <li className="nav-item w-100 mt-4 pt-3">
+                       <i class="far fa-user-circle fa-2x mt-1"></i>
+                         <span className="user_name">Elizabeth Hurton <br />
+                         <p >examples</p></span>                       
+                       <i class="fas fa-phone-alt fa-1x float-right mt-2 pr-2"></i>
+                       <i class="fas fa-comment float-right mr-3 mt-2"></i>
+                      </li>
+                      <li className="nav-item w-100 mt-4 pt-3">
+                       <i class="far fa-user-circle fa-2x mt-1"></i>
+                         <span className="user_name">Danny Watson<br />
+                         <p >examples</p></span>                       
+                       <i class="fas fa-phone-alt fa-1x float-right mt-2 pr-2"></i>
+                       <i class="fas fa-comment float-right mr-3 mt-2"></i>
+                      </li>
+                      <li className="nav-item w-100 mt-4 pt-3">
+                       <i class="far fa-user-circle fa-2x mt-1"></i>
+                         <span className="user_name">Reha Scarlett<br />
+                         <p >examples</p></span>                       
+                       <i class="fas fa-phone-alt fa-1x float-right mt-2 pr-2"></i>
+                       <i class="fas fa-comment float-right mr-3 mt-2"></i>
+                      </li>
+                      
                     </ul>
                   </div>
                 </div>

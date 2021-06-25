@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .App {
   text-align: center;
   display: flex;
@@ -130,28 +135,6 @@ color: #cf37fd;
 .progress1.red .progress-left .progress-bar {
   animation: loading-3 1.5s linear forwards 1.8s
 }
-.campaign_div{
-  border-right: 1px solid grey;
-  padding: 0 10px 0 20px;
-}
-.campaign_div i{
-  padding-top: 20px;
-  /* margin-right: 10px; */
-  color: rgb(255, 29, 29);
-}
-.user_name{
-  font-size: 1.2rem;
-  margin-left: 10px;
-  font-weight: 600;
-position: absolute;
-/* top:1%; */
-}
-.user_name p{
-  margin: 0;
-  font-size: 1rem;
-  font-weight: 0;
-  color: blue;
-}
 
 @keyframes loading-1 {
   0% {
@@ -194,6 +177,37 @@ position: absolute;
   }
 }
 
+.campaign_div{
+  border-right: 1px solid grey;
+  padding: 0 10px 0 20px;
+  overflow-x: hidden;
+}
+.campaign_div i{
+  padding-top: 20px;
+  /* margin-right: 10px; */
+  color: rgb(255, 29, 29);
+}
+.user_name{
+  font-size: 1.2rem;
+  margin-left: 10px;
+  font-weight: 600;
+position: absolute;
+/* top:1%; */
+}
+.user_name p{
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 0;
+  color: blue;
+}
+.fa-phone-alt , .fa-comment{
+  /* width: 20px;
+  height: 30px; */
+  border-radius: 50%;
+ text-align: center;
+  padding: 8px;
+  background-color: rgb(121, 121, 121);
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -208,12 +222,51 @@ position: absolute;
 .App-link {
   color: #61dafb;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pie_div1{
+  position: relative;
+  width: 100%;
+  z-index: 11111;
+}
+.pie_div1::before{
+  content: 'Open';
+  position: absolute;
+  text-align: center;
+  top:45%;
+  left: 40%;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+@media (max-width:480px) {
+.form-inline{
+  margin: 0 !important; padding: 0 !important;
+}  
+.form-inline .input-group{
+  margin-left: 0px !important;
+}
+.small-box p{
+  margin: 0 !important; padding: 0 !important;
+  text-align: left;
+}
+.small-box p i{
+margin-left: 10rem !important;
+}
+.two_row p .year{
+  margin-left: 6rem !important;
+}
+.two_row p span{
+ margin-left: 2rem !important;
+}
+.campaign_div{
+  border-right: 1px solid grey;
+  padding-left: 3px;
+  overflow-x: hidden;
+}
+.campaign_div i{
+  padding-top: 20px;
+  /* margin-right: 10px; */
+  color: rgb(255, 29, 29);
+}
+.pie_div i{
+margin-left: 6rem !important;
+}
 }

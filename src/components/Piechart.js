@@ -2,8 +2,10 @@ import React from 'react';
 import { Doughnut } from 'react-chartjs-2';
 
 const data = {
+  // lables:[20,40,50],
   datasets: [
     {
+      lable:[20,40,50],
       data: [30,25,40],
       backgroundColor: [
         'rgba(255, 99, 99)',
